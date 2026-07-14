@@ -1,1 +1,7 @@
 .idea/
+
+# .gitignore 添加
+venv/
+__pycache__/
+*.pyc
+*.pyd
