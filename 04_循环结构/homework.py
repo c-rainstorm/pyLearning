@@ -51,8 +51,8 @@ if n < 1:
 elif n == 1:
     print(100)
 else:
-    sum = 100;
-    tmp = 200;
+    sum = 100
+    tmp = 200
     for i in range(1,n):
         sum+=tmp/2
         tmp /= 2
