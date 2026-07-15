@@ -24,12 +24,9 @@ print(89//24,"天", 89%24,"小时")
 
 num = 12345
 a = num // 10000
-left = num % 10000
-b = left // 1000
-left = left % 1000
-c = left // 100
-left = left % 100
-d = left // 10
-e = left % 10
+b = num // 1000 % 10
+c = num // 100 % 10
+d = num // 10 % 10
+e = num % 10
 
-print(a,b,c,d,e, sep=",")
+print(a, b, c, d, e, sep=",")
