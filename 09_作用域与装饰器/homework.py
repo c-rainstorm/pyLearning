@@ -106,8 +106,19 @@ def gard(fn):
         print(fn, *args, end - start, **kwargs)  # 时间差
     return inner
 
-@gard
+def gard2(fn):
+    def inner(n):
+        start = time.time()
+        if n < 0:
+            print('提示：年龄不能小于0')
+            n = 0
+        fn(n)
+        end = time.time()
+        print(fn, end - start)  # 时间差
+    return inner
+
+@gard2
 def set_age(age):
     print(f'大家好！我今年{age}岁')
 
-set_age(20)
+set_age(-2)
