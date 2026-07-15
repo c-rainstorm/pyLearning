@@ -42,7 +42,7 @@ def print_calendar(year: int, month: int) -> None:
     total_days = total_days_after_epoch_day(year, month)
     weekday = first_weekday(total_days)
     days = days_in_month(year, month)
-
+    print("一\t二\t三\t四\t五\t六\t日\t")
     calendar_total = weekday + days - 1
     line = ""
     for i in range(1, calendar_total+1) :
@@ -66,8 +66,8 @@ def generator():
         yield i
         i += 1
 
-# generator = generator()
-# print(next(generator))
-# print(next(generator))
-# print(next(generator))
-# print(next(generator))
+generator = generator()
+print(next(generator))
+print(next(generator))
+print(next(generator))
+print(next(generator))
